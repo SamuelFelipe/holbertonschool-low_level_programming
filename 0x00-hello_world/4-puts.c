@@ -1,12 +1,11 @@
 #include <stdio.h>
 
-/*
- * main - print message
+/**
+ * main - prints with the puts fuccion a message
  *
  * Return: Always 0 (Succces)
  *
- */
-
+ **/
 
 int main(void)
 {
