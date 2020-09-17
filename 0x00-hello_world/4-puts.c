@@ -1,7 +1,16 @@
 #include <stdio.h>
 
-int main(){	
-	char text[52] = {"\"Programming is like building a multilingual puzzle"};
-	puts(text);
-	return 0;
+/*
+ * main - print message
+ *
+ * Return: Always 0 (Succces)
+ *
+ */
+
+
+int main(void)
+{
+	puts("\"Programming is like building a multilingual puzzle");
+
+	return (0);
 }
