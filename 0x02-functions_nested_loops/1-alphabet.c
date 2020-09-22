@@ -13,16 +13,3 @@ void print_alphabet(void)
 	for (c = 'a'; c <= 'z'; c++)
 		_putchar(c);
 }
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-
-int main(void)
-{
-	print_alphabet();
-	_putchar ('\n');
-	return (0);
-}
