@@ -8,7 +8,6 @@
 
 void jack_bauer(void)
 {
-
 	int i, j, k, l;
 
 	for (i = 0; i < 3; i++)
@@ -48,5 +47,4 @@ void jack_bauer(void)
 	if (i == 2 && j == 3 && k == 5 && l == 9)
 		break;
 	}
-
 }
