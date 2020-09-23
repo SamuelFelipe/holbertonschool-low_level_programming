@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <ctype.h>
 #include "holberton.h"
 
 /**
@@ -8,7 +6,7 @@
  * Return: 1 if the input is a character otherwise return 0
  */
 
-int _isalpha(char c)
+int _isalpha(int c)
 {
 	if (isalpha(c))
 		return (1);
