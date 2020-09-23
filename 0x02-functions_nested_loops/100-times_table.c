@@ -37,11 +37,11 @@ void print_times_table(int n)
 				_putchar((r % 10) + '0');
 			}}
 		else if (i == 0)
-		{
-			_putchar('0');
-			if (j < n)
+		{			
+			if (j <= n && j > 0)
 			for (c = 0; c < 3; c++)
-				_putchar(' '); }
+				_putchar(' ');
+			_putchar('0'); }
 		else
 			_putchar('0');
 		if (j < n)
