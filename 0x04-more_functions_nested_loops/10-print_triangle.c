@@ -2,7 +2,7 @@
 
 /**
  * print_triangle - print a triangle with le leght of the input
- * @size - size of the triangle
+ * @size: size of the triangle
  *
  * Return - none
  */
