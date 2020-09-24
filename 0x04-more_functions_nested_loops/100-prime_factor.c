@@ -16,7 +16,7 @@ int main(void)
 
 	for (prime = 2; prime < a; prime++)
 		if (a % prime == 0)
-			a = a / prime; 
+			a = a / prime;
 
 	printf("%d\n", prime);
 
