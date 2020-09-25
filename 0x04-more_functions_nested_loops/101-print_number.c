@@ -9,28 +9,28 @@
 
 void print_number(int n)
 {
-	int i, k, l;
+	int i, aux, lon;
 
-	l = 0;
+	lon = 0;
 	if (n < 0)
 	{
 		_putchar('-');
-		n = n * -1;
+		n = (n * -1);
 	}
-	k = n;
-	while (k >= 10)
+	aux = n;
+	while (aux >= 10)
 	{
-		k = k / 10;
-		l++;
+		aux = aux / 10;
+		lon++;
 	}
-	l++;
-	k = 1;
-	for (i = 1; i < l; i++)
-		k = k * 10;
-	for (i = 1; i < l; i++)
+	lon++;
+	aux = 1;
+	for (i = 1; i < lon; i++)
+		aux = aux * 10;
+	for (i = 1; i < lon; i++)
 	{
-		_putchar((n / k) % 10 + '0');
-		k = k / 10;
+		_putchar((n / aux) % 10 + '0');
+		aux = aux / 10;
 	}
 	_putchar((n % 10) + '0');
 }
