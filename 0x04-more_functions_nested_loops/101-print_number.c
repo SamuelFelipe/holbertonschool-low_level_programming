@@ -29,5 +29,5 @@ void print_number(int n)
 	}
 
 	for (; l >= 1; l /= 10)
-		_putchar((j / l) % 10 + '0');	
+		_putchar((j / l) % 10 + '0');
 }
