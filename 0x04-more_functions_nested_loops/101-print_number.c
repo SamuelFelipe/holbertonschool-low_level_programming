@@ -9,14 +9,13 @@
 
 void print_number(int n)
 {
-	int p, i, k, l, c;
+	int i, k, l, c;
 
 	l = 0;
 	c = 1;
-	p = 1;
 	if (n < 0)
 	{
-		p = 0;
+		_putchar('-');
 		n = n * -1;
 	}
 	k = n;
@@ -28,8 +27,6 @@ void print_number(int n)
 	l++;
 	for (i = 1; i < l; i++)
 		c = c * 10;
-	if (p == 0)
-		_putchar('-');
 	for (i = 1; i < l; i++)
 	{
 		_putchar((n / c) % 10 + '0');
