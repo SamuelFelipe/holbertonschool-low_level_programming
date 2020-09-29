@@ -19,10 +19,12 @@ int _atoi(char *s)
 			break;
 
 	for (j = i; j < l; j++)
+	{
 		if (*(s + j) - '0' <= 9 && *(s + j) - '0' >= 0)
 			;
 		else
 			break;
+	}
 	lnum = j - i;
 
 	for (k = 1; k < lnum; k++)
@@ -35,7 +37,7 @@ int _atoi(char *s)
 	}
 
 	if (*(s + i - 1) == '-')
-		num *= -1;
-
-	return (num);
+		return (-num);
+	else
+		return (num);
 }
