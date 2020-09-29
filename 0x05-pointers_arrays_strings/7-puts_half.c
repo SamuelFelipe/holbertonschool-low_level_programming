@@ -9,7 +9,7 @@
 
 void puts_half(char *str)
 {
-	unsigned int l = 0, i;
+	int l = 0, i;
 
 	while (*(str + l) != '\0')
 		l++;
@@ -20,7 +20,7 @@ void puts_half(char *str)
 		for (i = 0; i < l; i++)
 			_putchar(*(str + l + i));
 	}
-	else
+	else if (l % 2 == 1)
 	{
 		l = (l - 1) / 2;
 		for (i = 0; i < l; i++)
