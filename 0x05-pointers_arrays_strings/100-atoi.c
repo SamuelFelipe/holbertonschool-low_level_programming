@@ -36,5 +36,5 @@ int _atoi(char *s)
 	if (*(s + i - 1) == '-')
 		num *= -1;
 
-	return(num);
+	return (num);
 }
