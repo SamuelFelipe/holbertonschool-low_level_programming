@@ -10,27 +10,14 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int l = 1, i = 1, j;
+	int l = 0, l1 = 0, i;
 
 	while (*(dest + l) != '\0')
 		l++;
-	while (*(src + i) != '\0')
-		i++;
+	while (*(src + l1) != '\0')
+		l1++;
+	for (i = 0; i < l1; i++)
+		*(dest + (l + i))  = *(src + i);
 
-	char *ret = (char *)malloc((l + i) * sizeof(char));
-
-	for (j = 0; j < l; j++)
-	{
-		if (*(dest + j) != '\0')
-			*(ret + j) = *(dest + j);
-		else
-			*(ret + j) = ' ';
-	}
-	for (j = 0; j < i; j++)
-	{
-		*(ret + (l + j)) = *(src + j);
-		*(dest + (l + j)) = *(src + j);
-	}
-
-	return (ret);
+	return (dest);
 }
