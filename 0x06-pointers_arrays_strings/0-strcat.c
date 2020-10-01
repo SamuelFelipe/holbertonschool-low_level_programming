@@ -27,7 +27,10 @@ char *_strcat(char *dest, char *src)
 			*(ret + j) = ' ';
 	}
 	for (j = 0; j < i; j++)
+	{
 		*(ret + (l + j)) = *(src + j);
+		*(dest + (l + j)) = *(src + j);
+	}
 
 	return (ret);
 }
