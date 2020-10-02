@@ -15,8 +15,8 @@ char *leet(char *str)
 	while (*(str + l) != '\0')
 		l++;
 	for (i = 0; i < l; i++)
-	for (j = 0; j < l; j++)
-		if (*(str + i) == *(ch + j) && j < 10)
+	for (j = 0; j < 10; j++)
+		if (*(str + i) == *(ch + j))
 			*(str + i) = *(ch + (j + 5));
 
 	return (str);
