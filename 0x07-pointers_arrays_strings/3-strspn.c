@@ -10,7 +10,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, c = 0;
+	unsigned int sol, i, j, c = 0;
 
 	for (i = 0; *(s + i) != '\0'; i++)
 	for (j = 0; *(accept + j) != '\0'; j++)
@@ -19,5 +19,7 @@ unsigned int _strspn(char *s, char *accept)
 			c++;
 			break;
 		}
-	return (i - c);
+
+	sol = i - c;
+	return (sol);
 }
