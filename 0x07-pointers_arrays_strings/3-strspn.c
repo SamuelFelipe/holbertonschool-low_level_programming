@@ -10,19 +10,14 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int l = 0, ml = 0, i, j, c = 0;
+	unsigned int i, j, c = 0;
 
-	while (*(s + l) != '\0')
-		l++;
-	while (*(accept + ml) != '\0')
-		ml++;
-
-	for (i = 0; i < l; i++)
-	for (j = 0; j < ml; j++)
+	for (i = 0; *(s + i) != '\0'; i++)
+	for (j = 0; *(accept + j) != '\0'; j++)
 		if (*(accept + j) == *(s + i))
 		{
 			c++;
 			break;
 		}
-	return (l - c);
+	return (i - c);
 }
