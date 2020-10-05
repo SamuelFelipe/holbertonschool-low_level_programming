@@ -20,6 +20,9 @@ unsigned int _strspn(char *s, char *accept)
 	for (i = 0; i < l; i++)
 	for (j = 0; j < ml; j++)
 		if (*(accept + j) == *(s + i))
+		{
 			c++;
+			break;
+		}
 	return (l - c);
 }
