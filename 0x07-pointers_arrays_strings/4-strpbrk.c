@@ -23,6 +23,8 @@ char *_strpbrk(char *s, char *accept)
 		if (m == 1)
 			break;
 	}
-
-	return (&s[i]);
+	if (m == 1)
+		return (&s[i]);
+	else
+		return (NULL);
 }
