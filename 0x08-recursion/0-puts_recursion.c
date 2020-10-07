@@ -9,14 +9,10 @@
 
 void _puts_recursion(char *s)
 {
-	char *n;
-
-	n = &(*(s + 1));
-
 	if (*s && *(s + 1))
 	{
 		_putchar(*s);
-		_puts_recursion(n);
+		_puts_recursion(&(*(s + 1)));
 	}
 	else if (*s && !*(s + 1))
 	{
@@ -24,6 +20,4 @@ void _puts_recursion(char *s)
 		_putchar('\n');
 		return;
 	}
-	else
-		return;
 }
