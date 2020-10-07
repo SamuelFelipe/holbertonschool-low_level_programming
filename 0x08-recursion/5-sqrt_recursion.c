@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
- * step - return the next integer of the input
+ * stp - return the next integer of the input
  * @s: input
+ * @n: sqrt number
  *
  * Return: next int
  */

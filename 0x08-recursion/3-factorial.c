@@ -10,6 +10,7 @@
 int factorial(int n)
 {
 	int r = n;
+
 	if (n > 1)
 		r *= factorial(n - 1);
 	else if (n == 0)
