@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		if (n != -2)
-			printf("%d\n", r);
+			printf("%ld\n", r);
 		else
 			printf("0\n");
 		return (0);
