@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, n = -1, r = 0;
+	int i, n = -2, r = 0;
 
 	for (i = 1; i < argc; i++)
 	{
@@ -29,7 +29,10 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("%d\n", r);
+		if (n != -2)
+			printf("%d\n", r);
+		else
+			printf("0\n");
 		return (0);
 	}
 }
