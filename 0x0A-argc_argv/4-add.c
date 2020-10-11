@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		n = atoi(argv[i]);
-		if (n == 0 && *argv[i] - '0' != 48)
+		if (n == 0 && *argv[i] - '0' != 48 || n < 0)
 		{
 			n = -1;
 			break;
