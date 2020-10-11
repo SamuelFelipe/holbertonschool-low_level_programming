@@ -2,6 +2,8 @@
 
 /**
  * main - print the file name
+ * @argc: counter of argv
+ * @argv: arguments
  * 
  * Return: Always 0 (Succes)
  */
