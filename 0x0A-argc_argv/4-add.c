@@ -30,17 +30,6 @@ int main(int argc, char *argv[])
 		}
 		r += n;
 	}
-	if (n == -1)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	else
-	{
-		if (n != -2)
-			printf("%d\n", r);
-		else
-			printf("0\n");
-		return (0);
-	}
+	printf("%d\n", r);
+	return (0);
 }
