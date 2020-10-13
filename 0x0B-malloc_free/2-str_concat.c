@@ -29,7 +29,6 @@ char *str_concat(char *s1, char *s2)
 		*(fs + i) = *(s2 + j);
 	if (l == 0 && l1 == 0)
 		return (NULL);
-	else
 	fs[l + l1] = '\0';
 
 	return (fs);
