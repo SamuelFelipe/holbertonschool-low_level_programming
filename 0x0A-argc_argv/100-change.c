@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int r, ca, ci;
+	int ca, ci;
 
 	if (argc == 2)
 	{
