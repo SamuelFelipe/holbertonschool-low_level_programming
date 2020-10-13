@@ -22,7 +22,8 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	for (i = 0; i < l; i++)
 		*(fs + i) = *(s1 + i);
-	for (j = 0; i <= l + l1; i++, j++)
+	for (j = 0; i < l + l1; i++, j++)
 		*(fs + i) = *(s2 + j);
+	fs[i] = '\0';
 	return (fs);
 }
