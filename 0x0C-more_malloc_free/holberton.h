@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <string.h>
 
 int _putchar(char);
 void *malloc_checked(unsigned int );
