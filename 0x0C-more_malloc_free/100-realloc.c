@@ -2,7 +2,7 @@
 
 /**
  * _realloc - reallocate memory
- * @ptr - pointer to the memory previously allocated
+ * @ptr: pointer to the memory previously allocated
  * @old_size: <=
  * @new_size: <=
  *
