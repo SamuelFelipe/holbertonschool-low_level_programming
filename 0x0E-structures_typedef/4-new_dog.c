@@ -1,6 +1,29 @@
 #include "dog.h"
 
 /**
+ * duplicate - clone a string
+ * @s: input
+ *
+ * Return: pointer to a string
+ */
+
+char *duplicate(char *s)
+{
+	int i;
+	char *r;
+
+	for (i = 0; *(s + i); i++)
+		;
+	r = malloc(i * sizeof(char));
+	if (r == NULL)
+		return (NULL);
+	for (i = 0; *(s + i); i++)
+		*(r + i) = *(s + i);
+	*(r + i) = '\0';
+	return (r);
+}
+
+/**
  * new_dog - creates a new dog
  * @name: <=
  * @age: <=
@@ -17,10 +40,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (new == NULL || !name || !owner)
 		return (NULL);
 
-	(*new).name = name;
+	(*new).name = duplicate(name);
+	if ((*new).name == NULL)
+		return (NULL);
 	(*new).age = age;
-	(*new).owner = owner;
-	
+	(*new).owner = duplicate(owner);
+	if ((*new).owner == NULL)
+		return (NULL);
 
 	return (new);
 }
