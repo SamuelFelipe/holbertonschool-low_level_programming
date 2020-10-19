@@ -1,5 +1,5 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef LIKEMACRO_H
+#define LIKEMACRO_H
 
 #define ABS(x) ((x) > (0) ? (x) : (-x))
 
