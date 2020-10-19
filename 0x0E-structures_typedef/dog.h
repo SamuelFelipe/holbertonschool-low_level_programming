@@ -1,0 +1,27 @@
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
+
+
+#include <stdio.h>
+
+
+/**
+ * struct dog - dos data
+ * @name: <=
+ * @age: <=
+ * @owner: <=
+ */
+
+struct dog
+{
+	char *name;
+	float age;
+	char *owner;
+};
+
+
+void init_dog(struct dog *, char *, float, char *);
+void print_dog(struct dog *d);
+
+
+#endif
