@@ -14,9 +14,20 @@ dog_t *new_dog(char *name, float age, char *owner)
 	struct dog r;
 	struct dog *pr = &r;
 
-	(*pr).name = name;
-	(*pr).age = age;
-	(*pr).owner = owner;
+	if (name)
+		(*pr).name = name;
+	else
+		return (NULL);
+	if (age)
+		(*pr).age = age;
+	else
+		return (NULL);
+	if (owner)
+		(*pr).owner = owner;
+	else
+		return (NULL);
+	if (r == NULL)
+		return (NULL);
 
 	return (pr);
 }
