@@ -42,11 +42,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	(*new).name = duplicate(name);
 	if ((*new).name == NULL)
+	{
+		free(new);
 		return (NULL);
+	}
 	(*new).age = age;
 	(*new).owner = duplicate(owner);
 	if ((*new).owner == NULL)
+	{
+		free((*new).name);
+		free(new);
 		return (NULL);
+	}
 
 	return (new);
 }
