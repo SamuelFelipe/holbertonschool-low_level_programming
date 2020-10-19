@@ -14,7 +14,7 @@ char *duplicate(char *s)
 
 	for (i = 0; *(s + i); i++)
 		;
-	r = malloc(i * sizeof(char));
+	r = malloc(i * sizeof(char) + 1);
 	if (r == NULL)
 		return (NULL);
 	for (i = 0; *(s + i); i++)
