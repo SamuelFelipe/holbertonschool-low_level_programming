@@ -10,7 +10,7 @@
 
 int main(int argc, char **argv)
 {
-	int (*i)(int, int)
+	int (*i)(int, int);
 	int a, b;
 
 	if (argc != 4)
