@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 	i = *get_op_func(argv[2]);
-	if (!i)
+	if (!f || av[2][1] != 0)
 	{
 		printf("Error\n");
 		exit(99);
