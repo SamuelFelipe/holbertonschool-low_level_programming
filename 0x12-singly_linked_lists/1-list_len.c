@@ -9,10 +9,13 @@
 
 size_t list_len(const list_t *h)
 {
-	unsigned int r = 1;
+	unsigned int r = 0;
 
 	if ((*h).next)
+	{
+		r++;
 		r += list_len((*h).next);
+	}
 
 	return (r);
 }
