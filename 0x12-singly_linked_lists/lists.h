@@ -8,6 +8,14 @@
 
 /***************************************************************************/
 
+/**
+ * struct list_s - struct
+ *
+ * @str: string
+ * @len: string length
+ * @next: <=
+ */
+
 typedef struct list_s
 {
 	char *str;
