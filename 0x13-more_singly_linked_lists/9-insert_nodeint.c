@@ -26,12 +26,15 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		if ((*beh).next == NULL)
 		{
 			beh = (*beh).next;
-			return (NULL);
+			break;
 		}
 		else
 			beh = (*beh).next;
 	if (beh == NULL && i < idx - 1)
+	{
+		free(new);
 		return (NULL);
+	}
 
 	next = (*beh).next;
 	(*new).n = n;
