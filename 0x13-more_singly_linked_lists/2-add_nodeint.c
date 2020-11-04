@@ -1,8 +1,9 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - add a new node
- * @h: head
+ * add_nodeint - add a new node
+ * @head: list head
+ * @n: node data
  *
  * Return: on succes address to the new node, othewise 0
  */
