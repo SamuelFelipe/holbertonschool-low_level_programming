@@ -11,6 +11,9 @@ void free_listint(listint_t *head)
 {
 	listint_t *last;
 
+	if (head == NULL)
+		return;
+
 	while ((*head).next)
 	{
 		last = (*head).next;
