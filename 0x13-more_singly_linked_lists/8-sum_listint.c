@@ -9,12 +9,11 @@
 
 int sum_listint(listint_t *head)
 {
-	if (head == NULL)
-		return (0);
-
 	listint_t *new;
 	int r = 0;
 
+	if (head == NULL)
+		return (0);
 	new = head;
 
 	for (; new;)
