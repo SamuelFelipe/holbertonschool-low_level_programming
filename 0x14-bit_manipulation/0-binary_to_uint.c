@@ -34,10 +34,12 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int r = 0, i, l = 0;
 
+	if (!*b)
+		return (0);
+
 	while (*(b + l))
 		l++;
-
-	for (i = 1; i <= 8, l; i++, l--)
+	for (i = 1; i <= 8 && l != 0; i++, l--)
 	{
 		if (*(b + l - 1) >= 48 && *(b + l - 1) <= 57)
 			r += _pow((*(b + l - 1) - '0'), i);
