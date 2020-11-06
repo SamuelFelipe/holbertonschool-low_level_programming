@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include "limits.h"
 /**
  * print_binary - prints the binary representation of a number
  * @n: number
@@ -9,8 +9,9 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int r = 4294967296, m = 0;
+	unsigned long int r = ULONG_MAX, m = 0;
 
+	r <<= 63;
 	if (n == 0)
 	{
 		_putchar(48);
