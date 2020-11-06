@@ -9,7 +9,7 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int r = 1024, m = 0;
+	unsigned long int r = 4294967296, m = 0;
 
 	if (n == 0)
 	{
