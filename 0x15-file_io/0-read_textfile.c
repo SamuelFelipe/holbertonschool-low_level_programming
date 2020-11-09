@@ -37,7 +37,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	/* write in POSIX standar output*/
-	r = write(1, buf, re);
+	r = write(STDOUT_FILENO, buf, re);
 	/* return 0 if the read result and the write result are not the same*/
 	if (r != re)
 	{
