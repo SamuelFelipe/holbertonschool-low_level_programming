@@ -65,9 +65,9 @@ int main(int argc, char **argv)
 	if (cs == -1 || ct == -1)
 	{
 		if (cs == -1)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fds);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[1]);
 		if (ct == -1)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdt);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[2]);
 		exit(100);
 	}
 
