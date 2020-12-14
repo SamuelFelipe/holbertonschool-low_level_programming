@@ -31,10 +31,15 @@ typedef struct dlistint_s
 
 /*			print dlistint values			*/
 size_t print_dlistint(const dlistint_t *);
+
 /*			return the length of the list		*/
 size_t dlistint_len(const dlistint_t *);
+
 /*			add a new node to the list		*/
 dlistint_t *add_dnodeint(dlistint_t **, const int);
+
+/* 		add a new node to the end of the list		*/
+dlistint_t *add_dnodeint_end(dlistint_t **, const int);
 
 /****************************************************************************/
 
