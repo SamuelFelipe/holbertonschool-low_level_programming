@@ -44,6 +44,9 @@ dlistint_t *add_dnodeint_end(dlistint_t **, const int);
 /*			free the list				*/
 void free_dlistint(dlistint_t *head);
 
+/*		return the direction of a selected node		*/
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
+
 /****************************************************************************/
 
 #endif
