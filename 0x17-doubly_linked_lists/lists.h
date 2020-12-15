@@ -47,6 +47,9 @@ void free_dlistint(dlistint_t *head);
 /*		return the direction of a selected node		*/
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 
+/*		return the sum of the list data			*/
+int sum_dlistint(dlistint_t *head);
+
 /****************************************************************************/
 
 #endif
