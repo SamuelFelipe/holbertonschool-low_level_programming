@@ -1,20 +1,6 @@
 #include "hash_tables.h"
 
 /**
- * free_node - free a node
- * @node: node to free
- *
- * Return: none
- */
-
-void free_node(hash_node_t *node)
-{
-	free(node->key);
-	free(node->value);
-	free(node);
-}
-
-/**
  * hash_table_set - adds an element to the hash table
  * @ht: table to update
  * @key: node key
@@ -26,7 +12,7 @@ void free_node(hash_node_t *node)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	char *aux = NULL;
+	char *aux;
 	hash_node_t *new, *tmp;
 
 	if (!value || !ht || !key || !strlen(value))
@@ -34,10 +20,27 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	index = key_index((unsigned char *)key, ht->size);
 
+	if (ht->array[index])
+	{
+		tmp = ht->array[index];
+		while (tmp)
+		{
+			if (!strcmp(tmp->key, key))
+			{
+				aux = strdup(value);
+				if (!aux)
+					return (0);
+				free(tmp->value);
+				tmp->value = aux;
+				return (1);
+			}
+			tmp = tmp->next;
+		}
+	}
 	new = malloc(sizeof(hash_node_t));
 	if (!new)
 		return (0);
-	new->next = NULL;
+	new->next = ht->array[index];
 	new->key = strdup(key);
 	if (!new->key)
 	{
@@ -51,29 +54,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(new);
 		return (0);
 	}
-	if (!ht->array[index])
-		ht->array[index] = new;
-	else
-	{
-		tmp = ht->array[index];
-		while (tmp->next)
-			if (strcmp(tmp->key, key))
-				tmp = tmp->next;
-			else
-				break;
-
-		if (strcmp(tmp->key, key))
-			tmp->next = new;
-		else
-		{
-			free_node(new);
-			aux = strdup(value);
-			if (!aux)
-				return (0);
-			free(tmp->value);
-			tmp->value = aux;
-		}
-	}
-
+	ht->array[index] = new;
 	return (1);
 }
