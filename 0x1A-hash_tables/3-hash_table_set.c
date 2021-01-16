@@ -42,7 +42,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		tmp = ht->array[index];
 		while (tmp->next)
+		{
+			if (!strcmp(tmp->key), key)
+			{
+				free(new->value);
+				free(tmp->value);
+				free(new->key);
+				free(new);
+				tmp->value = strdup(value);
+				if (!tmp->value)
+					return (0);
+				return (1);
+			}
 			tmp = tmp->next;
+		}
 		tmp->next = new;
 	}
 
