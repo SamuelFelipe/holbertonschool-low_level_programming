@@ -17,26 +17,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!value || !ht || !key || !strlen(value))
 		return (0);
-
 	index = key_index((unsigned char *)key, ht->size);
-
-	if (ht->array[index])
-	{
-		tmp = ht->array[index];
-		while (tmp)
+	tmp = ht->array[index];
+	while (tmp)
+		if (!strcmp(tmp->key, key))
 		{
-			if (!strcmp(tmp->key, key))
-			{
-				aux = strdup(value);
-				if (!aux)
-					return (0);
-				free(tmp->value);
-				tmp->value = aux;
-				return (1);
-			}
-			tmp = tmp->next;
+			aux = strdup(value);
+			if (!aux)
+				return (0);
+			free(tmp->value);
+			tmp->value = aux;
+			return (1);
 		}
-	}
+		else
+			tmp = tmp->next;
 	new = malloc(sizeof(hash_node_t));
 	if (!new)
 		return (0);
