@@ -1,6 +1,16 @@
 #!/usr/bin/python3
 
+'''
+island_perimeter function.
+'''
+
+
 def island_perimeter(grid):
+    '''
+    Function to find the perimeter of a figure in a grid
+    the 0 is an empty casille and 1 is a figure casille
+    '''
+
     height = len(grid) - 1
     width = len(grid[0]) - 1
 
