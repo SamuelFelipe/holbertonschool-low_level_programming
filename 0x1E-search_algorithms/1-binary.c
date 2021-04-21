@@ -13,30 +13,30 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-  int L, R, m = 0;
+		int L, R, m = 0;
 
-  if (!array)
-    return (-1);
+		if (!array)
+				return (-1);
 
-  L = 0;
-  R = (int) size - 1;
+		L = 0;
+		R = (int) size - 1;
 
-  while (1)
-  {
-    if (L > R)
-      return (-1);
+		while (1)
+		{
+				if (L > R)
+						return (-1);
 
-    print_array(array, L, R);
+				print_array(array, L, R);
 
-    m = (L + R) / 2;
+				m = (L + R) / 2;
 
-    if (array[m] < value)
-      L = m + 1;
-    else if (array[m] > value)
-      R = m - 1;
-    else
-      return (m);
-  }
+				if (array[m] < value)
+						L = m + 1;
+				else if (array[m] > value)
+						R = m - 1;
+				else
+						return (m);
+		}
 }
 
 
@@ -44,7 +44,8 @@ int binary_search(int *array, size_t size, int value)
  * print_array - print the actual step of the algorithm
  *
  * @array: array to print
- * @size: array size
+ * @L: array position
+ * @R: array position
  *
  * Return: none
  */
@@ -52,13 +53,13 @@ int binary_search(int *array, size_t size, int value)
 
 void print_array(int *array, int L, int R)
 {
-  int i;
+		int i;
 
-  printf("Searching in array: ");
+		printf("Searching in array: ");
 
-  for (i = L; i < R; i++)
-  {
-    printf("%d, ", array[i]);
-  }
-  printf("%d\n", array[i]);
+		for (i = L; i < R; i++)
+		{
+				printf("%d, ", array[i]);
+		}
+		printf("%d\n", array[i]);
 }
